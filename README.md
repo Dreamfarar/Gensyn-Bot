@@ -2,7 +2,7 @@
 
 ![GniezyaWUAAAvZO](https://github.com/user-attachments/assets/9f703a84-34da-4ce5-a68f-2accd43d2a27)
 
-# ⚡ Gensyn-Bot by [Kazuha](https://github.com/Kazuha787) ⚡
+# ⚡ Gensyn-Bot by [ Kazuha](https://github.com/Kazuha787) ⚡
 # ⚡ Telegram [CHANNEL](https://t.me/Offical_Im_kazuha)
 
 ## installation Required 
