@@ -35,11 +35,8 @@ echo "📦 Updating server..."
 sudo apt update && sudo apt install -y sudo
 
 echo "🔧 Installing required packages..."
-sudo apt update && sudo apt install -y \
-  python3 python3-venv python3-pip curl wget screen git lsof
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install -y yarn
+sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof nano unzip iproute2 build-essential gcc g++
+[ -f cuda.sh ] && rm cuda.sh; curl -o cuda.sh https://raw.githubusercontent.com/zunxbt/gensyn-testnet/main/cuda.sh && chmod +x cuda.sh && . ./cuda.sh
 
 echo "🚀 Starting Gensyn script..."
 curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | bash
@@ -48,14 +45,6 @@ echo "📁 Cloning repository..."
 cd $HOME
 [ -d rl-swarm ] && rm -rf rl-swarm
 git clone https://github.com/gensyn-ai/rl-swarm.git
-cd rl-swarm
-
-echo "📦 Updating Yarn..."
-cd modal-login
-yarn install
-yarn upgrade
-yarn add next@latest
-yarn add viem@latest
 
 echo "🚀 Installing Node..."
 cd $HOME/rl-swarm
