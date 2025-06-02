@@ -14,6 +14,6 @@ https://dashboard.ngrok.com/login
 Copy the Auth token 
 
 ```sh
-source <(wget -O - https://raw.githubusercontent.com/Kazuha787/Gensyn-Bot/refs/heads/main/gensyn.sh)
+source <(wget -O - https://raw.githubusercontent.com/Dreamfarar/Gensyn-Bot/refs/heads/main/gensyn.sh)
 ```
 ## Give me full Star in the Repository 
