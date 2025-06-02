@@ -33,6 +33,7 @@ echo " "
 
 echo "📦 Updating server..."
 sudo apt update && sudo apt install -y sudo
+sudo npm install -g localtunnel
 
 echo "🔧 Installing required packages..."
 sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof nano unzip iproute2 build-essential gcc g++
