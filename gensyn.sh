@@ -47,7 +47,7 @@ curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | b
 echo "📁 Cloning repository..."
 cd $HOME
 [ -d rl-swarm ] && rm -rf rl-swarm
-git clone https://github.com/zunxbt/rl-swarm.git
+git clone https://github.com/gensyn-ai/rl-swarm.git
 cd rl-swarm
 
 echo "📦 Updating Yarn..."
