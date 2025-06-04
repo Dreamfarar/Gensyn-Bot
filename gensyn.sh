@@ -49,7 +49,9 @@ git clone https://github.com/gensyn-ai/rl-swarm.git
 
 echo "🚀 Installing Node..."
 cd $HOME/rl-swarm
-screen -dmS gensyn bash -c "python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh"
+# screen -dmS gensyn bash -c "python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh"
+screen -dmS gensyn bash -c "python3 -m venv .venv && . .venv/bin/activate && nohup ./run_rl_swarm.sh > output.log 2>&1 &"
+
 
 echo "✅ Setup completed successfully!"
 echo " "
