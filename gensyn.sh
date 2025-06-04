@@ -40,35 +40,17 @@ sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wge
 [ -f cuda.sh ] && rm cuda.sh; curl -o cuda.sh https://raw.githubusercontent.com/zunxbt/gensyn-testnet/main/cuda.sh && chmod +x cuda.sh && . ./cuda.sh
 
 echo "🚀 Starting Gensyn script..."
-curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | bash
+screen -S gensyn
 
 echo "📁 Cloning repository..."
-cd $HOME
-[ -d rl-swarm ] && rm -rf rl-swarm
-git clone https://github.com/gensyn-ai/rl-swarm.git
+git clone https://github.com/gensyn-ai/rl-swarm.git && cd rl-swarm
 
 echo "🚀 Installing Node..."
 cd $HOME/rl-swarm
-screen -dmS gensyn bash -c "python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh"
-# screen -dmS gensyn bash -c "python3 -m venv .venv && . .venv/bin/activate && nohup ./run_rl_swarm.sh > output.log 2>&1 &"
+bash -c "python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh"
 
 
 echo "✅ Setup completed successfully!"
 echo " "
 
-# Outro Banner – Flex that brand
-echo -e "${CYAN}"
-echo -e "${CYAN}██╗  ██╗ █████╗ ███████╗██╗   ██╗██╗  ██╗ █████╗ ${NC}"
-echo -e "${CYAN}██║ ██╔╝██╔══██╗╚══███╔╝██║   ██║██║  ██║██╔══██╗${NC}"
-echo -e "${CYAN}█████╔╝ ███████║  ███╔╝ ██║   ██║███████║███████║${NC}"
-echo -e "${CYAN}██╔═██╗ ██╔══██║ ███╔╝  ██║   ██║██╔══██║██╔══██║${NC}"
-echo -e "${CYAN}██║  ██╗██║  ██║███████╗╚██████╔╝██║  ██║██║  ██║${NC}"
-echo -e "${CYAN}╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝${NC}"
-echo -e "${BLUE}=======================================================${NC}"
-echo -e "${GREEN} 🚀 Gensyn-Bot Node Management One-Click Setup Script 🚀 ${NC}"
-echo -e "${BLUE}=======================================================${NC}"
-echo -e "${CYAN}    🌐  Telegram: @Offical_Im_kazuha${NC}"
-echo -e "${CYAN}    💻  GitHub:   github.com/Kazuha787${NC}"
-echo -e "${BLUE}=======================================================${NC}"
-echo -e "${GREEN}To run the node: ${NC}""${YELLOW}screen -r gensyn${NC}"
-echo -e "${GREEN}Developed by: ${NC}${CYAN}Kazuha - Your bash wizard${NC}"
+
