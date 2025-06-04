@@ -9,27 +9,7 @@ CYAN='\033[0;36m'
 MAGENTA='\033[0;35m'
 NC='\033[0m' # No Color
 
-# Intro Banner – Kazuha Style
-echo " "
-echo " "
-echo " "
-echo -e "${CYAN}╔════════════════════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║           GENSYN NODE INSTALLER SCRIPT             ║${NC}"
-echo -e "${CYAN}║         Automate your Gensyn node setup!           ║${NC}"
-echo -e "${CYAN}║    Developed by: https://t.me/Offical_Im_kazuha    ║${NC}"
-echo -e "${CYAN}║    GitHub: https://github.com/Kazuha787            ║${NC}"
-echo -e "${CYAN}╠════════════════════════════════════════════════════╣${NC}"
-echo -e "${CYAN}║                                                    ║${NC}"
-echo -e "${CYAN}║  ██╗  ██╗ █████╗ ███████╗██╗   ██╗██╗  ██╗ █████╗  ║${NC}"
-echo -e "${CYAN}║  ██║ ██╔╝██╔══██╗╚══███╔╝██║   ██║██║  ██║██╔══██╗ ║${NC}"
-echo -e "${CYAN}║  █████╔╝ ███████║  ███╔╝ ██║   ██║███████║███████║ ║${NC}"
-echo -e "${CYAN}║  ██╔═██╗ ██╔══██║ ███╔╝  ██║   ██║██╔══██║██╔══██║ ║${NC}"
-echo -e "${CYAN}║  ██║  ██╗██║  ██║███████╗╚██████╔╝██║  ██║██║  ██║ ║${NC}"
-echo -e "${CYAN}║  ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ║${NC}"
-echo -e "${CYAN}║                                                    ║${NC}"
-echo -e "${CYAN}╚════════════════════════════════════════════════════╝${NC}"
-echo " "
-echo " "
+
 
 echo "📦 Updating server..."
 sudo apt update && sudo apt install -y sudo
@@ -46,7 +26,6 @@ echo "📁 Cloning repository..."
 git clone https://github.com/gensyn-ai/rl-swarm.git && cd rl-swarm
 
 echo "🚀 Installing Node..."
-cd $HOME/rl-swarm
 bash -c "python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh"
 
 
