@@ -29,7 +29,3 @@ echo "🚀 Installing Node..."
 bash -c "python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh"
 
 
-echo "✅ Setup completed successfully!"
-echo " "
-
-
